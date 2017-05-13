@@ -187,7 +187,7 @@ class Chart(QWidget):
 
     def wheelEvent(self, event):
         super().wheelEvent(event)
-        if(event.delta() >0 ): #up
+        if(event.angleDelta().y() >0 ): #up
             if(self.zoom < self.zoominmax):
                 self.zoom *=1.1
                 self.update()
